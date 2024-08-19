@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/partials/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -17,10 +18,10 @@ const config: Config = {
         'blue-light': '#CFDEF3',
         'white': '#FFFFFF',
         'ice': '#f5f5f5',
-        'black': '#1f2937',
-        'text': "#1f2937",
+        'black': 'rgb(27, 31, 43)',
         'text-light': "#6b7280",
         'gray': '#404040',
+        'brown-light': 'rgb(174, 162, 140)'
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
@@ -30,7 +31,7 @@ const config: Config = {
       },
       screens: {
         'md-lg': '800px',
-        'sm-lg': { 'max': '360px' },
+        'sm-lg': '500px',
       },
     },
   },

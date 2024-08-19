@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Loading from './Loading';
 
 type Technology = {
     src: string;
@@ -8,6 +9,7 @@ type Technology = {
 
 const TechCarousel: React.FC = () => {
     const [technologies, setTechnologies] = useState<Technology[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchTechnologies() {
@@ -17,11 +19,15 @@ const TechCarousel: React.FC = () => {
                 setTechnologies(data);
             } catch (error) {
                 console.error('Error fetching technologies', error);
+            } finally {
+                setIsLoading(false);
             }
         }
 
         fetchTechnologies();
     }, []);
+
+    if (isLoading) return <Loading />;
 
     return (
         <div className="overflow-hidden relative flex justify-center bg-white p-4">

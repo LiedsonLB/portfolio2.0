@@ -19,6 +19,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -35,7 +39,7 @@ body {
 .big-text {
   font-weight: 700;
   white-space: pre-wrap;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 .style-btn {
@@ -141,7 +145,79 @@ input:checked + .toggle {
   transition: opacity 0.3s ease;
 }
 
-/* animations */
+/* Cards Projects styles */
+.overlay {
+  height: 50%;
+}
+
+.card {
+  transition: .3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  scale: 1.05;
+  transition: .5s ease-in-out;
+}
+
+.aside-background {
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.aside-animation {
+  transition: 1s ease;
+}
+
+/* Animations */
+
+.scaleIn {
+  animation: fadeInAndScale 1s ease forwards;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fadeInAndUp {
+  animation: fadeInAndUp 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInAndScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInAndUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes scroll {
   0% {
@@ -155,4 +231,36 @@ input:checked + .toggle {
 
 .carousel-track {
   animation: scroll 30s linear infinite;
+}
+
+/* Loading */
+.loader {
+  border: 4px solid #004E98;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.loader {
+  border: 4px solid #004E98;
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 4px solid #004E98;
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

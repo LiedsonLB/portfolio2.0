@@ -22,20 +22,20 @@ export default function Header() {
             <h1><span className="bg-blue text-white p-2">LB</span> Liedson</h1>
 
             <nav className=" text-base list-none gap-8 hidden font-[600] md-lg:flex">
-                <li className="py-1 hover:text-blue">
-                    <a>Sobre mim</a>
+                <li className="py-1">
+                    <a className="hover:text-blue" href="#aboutMe">Sobre mim</a>
                 </li>
-                <li className="py-1 hover:text-blue">
-                    <a>Tecnologias</a>
+                <li className="py-1">
+                    <a className="hover:text-blue" href="#myTecnologies">Tecnologias</a>
                 </li>
-                <li className="py-1 hover:text-blue">
-                    <a>Habilidades</a>
+                <li className="py-1">
+                    <a className="hover:text-blue" href="#mySoftSkills">Habilidades</a>
                 </li>
-                <li className="py-1 hover:text-blue">
-                    <a>Projetos</a>
+                <li className="py-1">
+                    <a className="hover:text-blue" href="#myProjects">Projetos</a>
                 </li>
-                <li className="py-1 hover:text-blue">
-                    <a>Contatos</a>
+                <li className="py-1">
+                    <a className="hover:text-blue" href="#contateMe">Contatos</a>
                 </li>
 
                 <div className="switch">
