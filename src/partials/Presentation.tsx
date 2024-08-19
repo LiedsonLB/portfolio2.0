@@ -5,9 +5,11 @@ export default function Apresentation() {
     return (
         <section className="flex flex-col-reverse p-4 items-center justify-center md-lg:flex-row md-lg:max-w-[85%] md-lg:mx-auto h-[calc(92vh-140px)] sm-lg:h-[calc(100vh-140px)]">
             <div className="h-auto w-[100%] px-2 md-lg:px-8 gap-2 text-center md-lg:text-start flex flex-col text-black justify-center items-center md-lg:items-start">
-                <h1 className="big-text font-[800] fadeInLeft" style={{fontSize: 'clamp(30px, 5vw + 0.2rem, 50px)'}}>Olá, Sou <span className="text-blue">Liedson</span></h1>
-                <h2 className="italic fadeInLeft" style={{fontSize: 'clamp(12px, 4vw + 0.2rem, 35px)'}}>Desenvolvedor Fullstack</h2>
-                <p className="max-w-[500px] md-lg:max-w-[600px] text-text-light mb-2 fadeInAndUp" style={{fontSize: 'clamp(16px, 3vw + 0.1rem, 20px)'}}>Há 5 anos, Desenvolvendo
+                <h1 className="font-doppio font-[800] fadeInLeft" style={{ fontSize: 'clamp(30px, 5vw + 0.2rem, 50px)' }}>
+                    Olá, Sou <span className="text-blue">Liedson</span>
+                </h1>
+                <h2 className="italic fadeInLeft" style={{ fontSize: 'clamp(12px, 4vw + 0.2rem, 35px)' }}>Desenvolvedor Fullstack</h2>
+                <p className="max-w-[500px] md-lg:max-w-[600px] text-text-light mb-2 fadeInAndUp" style={{ fontSize: 'clamp(16px, 3vw + 0.1rem, 20px)' }}>Há 5 anos, Desenvolvendo
                     aplicações incríveis, sempre
                     focado em oferecer soluções de alta qualidade para meus
                     clientes...

@@ -27,7 +27,9 @@ const config: Config = {
         montserrat: ['Montserrat', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
-        noto: ["Noto Sans Display", 'sans-serif']
+        noto: ["Noto Sans Display", 'sans-serif'],
+        doppio: ['Doppio One', 'sans-serif'],
+        Electrolize: ['Electrolize', 'sans-serif']
       },
       screens: {
         'md-lg': '800px',

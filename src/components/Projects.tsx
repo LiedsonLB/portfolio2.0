@@ -29,19 +29,19 @@ export default function Projects() {
             <div className="flex flex-row gap-6 w-full h-auto overflow-x-auto pb-6">
                 {projects.map((project) => (
                     <div key={project.title} className="flex flex-col card relative w-[330px] min-w-[330px] h-[330px]" style={{ overflow: 'hidden' }}>
-                        <div className="container-img" style={{ height: '90%', position: 'relative' }}>
+                        <div className="container-img" style={{ height: '100%', position: 'relative' }}>
                             <Image
                                 src={project.picture}
-                                style={{ minHeight: '100%', maxWidth: '100%' }}
+                                style={{ minHeight: '100%', maxWidth: '100%', filter: 'saturate(1.1)'}}
                                 layout="fill"
-                                objectFit="cover"
+                                objectFit="contain"
                                 alt={project.title}
                             />
                         </div>
-                        <div className="font-montserrat overlay bg-white p-4 z-[2]">
+                        <div className="overlay bg-white p-4 z-[2] select-none rounded-xl">
                             <h2 className="text-xl text-blue font-bold">{project.title}</h2>
-                            <p className="text-sm text-text-light h-[4.6ch] overflow-hidden" style={{ fontSize: 'clamp(14px, 3vw + 0.1rem, 16px)' }}>{project.description}</p>
-                            <div className="flex flex-wrap gap-2 mt-2">
+                            <p className="text-sm text-text-light h-[43px] overflow-hidden" style={{ fontSize: 'clamp(14px, 3vw + 0.1rem, 16px)' }}>{project.description}</p>
+                            <div className="flex flex-wrap gap-2 mt-2 max-h-[80px] overflow-hidden">
                                 {project.technologies.map((techName) => {
                                     const tech = technologies.find(t => t.name === techName);
                                     return (
@@ -51,7 +51,7 @@ export default function Projects() {
                                                 style={{ backgroundColor: tech.color }}
                                                 className="px-2 py-1 rounded-full text-white font-[500] opacity-90"
                                             >
-                                                <p className="font-poppins">{tech.name}</p>
+                                                <p className="font">{tech.name}</p>
                                             </span>
                                         )
                                     );

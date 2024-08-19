@@ -47,6 +47,8 @@ export default function handler(
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg', name: 'Trello', color: '#0079BF' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg', name: 'Heroku', color: '#430098' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', name: 'VSCode', color: '#007ACC' },
+        { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain-wordmark.svg', name: 'Axios', color: '#5A29E3' },
+        { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg', name: 'Prisma', color: '#2D3748' },
     ];
 
     res.status(200).json(technologies);
