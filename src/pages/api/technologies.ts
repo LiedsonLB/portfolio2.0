@@ -45,7 +45,7 @@ export default function handler(
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg', name: 'Jest', color: '#C21325' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg', name: 'Figma', color: '#F24E1E' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg', name: 'Trello', color: '#0079BF' },
-        { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg', name: 'Heroku', color: '#430098' },
+        { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg', name: 'Vercel', color: '#430098' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', name: 'VSCode', color: '#007ACC' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain-wordmark.svg', name: 'Axios', color: '#5A29E3' },
         { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg', name: 'Prisma', color: '#2D3748' },

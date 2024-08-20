@@ -18,7 +18,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-white text-gray font-[700] flex justify-between items-center px-6 md-lg:px-12 py-4 relative">
+        <header className="bg-white text-gray font-[700] flex justify-between items-center px-6 md-lg:px-12 py-4 sticky top-0 z-10">
             <h1><span className="bg-blue text-white p-2">LB</span> Liedson</h1>
 
             <nav className=" text-base list-none gap-8 hidden font-[600] md-lg:flex">

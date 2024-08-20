@@ -51,9 +51,8 @@ header {
   padding: 8px 16px;
 }
 
-button:hover,
-li:hover {
-  opacity: 0.8;
+button:hover, a:hover {
+  opacity: 0.8 !important;
   cursor: pointer;
 }
 
@@ -151,11 +150,9 @@ input:checked + .toggle {
 
 .card {
   transition: .3s;
-  cursor: pointer;
 }
 
 .card:hover {
-  scale: 1.05;
   transition: .5s ease-in-out;
 }
 
