@@ -11,7 +11,7 @@ export default function AboutMe() {
                 <div className="flex flex-col md-lg:flex-row gap-8">
                     <div className="md-lg:max-w-[60%]">
                         <Image
-                            src='/img/perfil.jpg'
+                            src='/img/profile1.png'
                             className="mx-auto my-4 rounded-full"
                             style={{ filter: 'saturate(1.4)' }}
                             height={90}

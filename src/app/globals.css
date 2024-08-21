@@ -165,6 +165,45 @@ input:checked + .toggle {
   transition: 1s ease;
 }
 
+/* Input Style */
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-search, .input-search-login {
+  border-bottom: solid 2px #e7e7e7;
+  background: #fcfcfc;
+  padding-inline: 1rem;
+  height: 50px;
+  font-size: 1rem;
+  color: #8c8c8c;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 100%;
+}
+
+.user-label {
+  position: absolute;
+  left: 15px;
+  color: #8c8c8c;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-search:focus~.user-label, .input-search-login:focus~.user-label,
+.input-search:not(:placeholder-shown)~.user-label, .input-search-login:not(:placeholder-shown)~.user-label {
+  transform: translateY(-50%) translateX(-1rem) scale(0.8);
+  background-color: transparent;
+  padding: 0 .2em;
+}
+
+.input-search:focus, .input-search-login:focus {
+  outline: none;
+}
+
+
 /* Animations */
 
 .scaleIn {
