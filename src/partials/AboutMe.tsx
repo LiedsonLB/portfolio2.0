@@ -7,7 +7,7 @@ export default function AboutMe() {
             <p className="max-w-[400px] text-center md-lg:max-w-[75%] m-auto text-white  mb-4" style={{ fontSize: 'clamp(16px, 3vw + 0.1rem, 20px)' }}>
                 Leia um pouco sobre mim, e confira meus currículos, meus serviços, certificados, etc... em “Ler Tudo”
             </p>
-            <div className="max-w-[95%] md-lg:max-w-[85%] m-auto py-8 px-6 md-lg:px-12 rounded-lg shadow-md bg-white text-black tracking-wide leading-relaxed">
+            <div className="max-w-[95%] md-lg:max-w-[85%] m-auto py-8 px-6 md-lg:px-12 rounded-lg shadow-md bg-white text-text-light tracking-wide leading-relaxed">
                 <div className="flex flex-col md-lg:flex-row gap-8">
                     <div className="md-lg:max-w-[60%]">
                         <Image
@@ -28,22 +28,22 @@ export default function AboutMe() {
                         <br />
                         <p>
                             Além disso, atuo como freelancer, oferecendo soluções personalizadas para sites, automações, dashboards de vendas, design, e muito mais.
-                            <span className="text-blue font-bold"> Estou comprometido em construir sua marca e empresa com o que há de melhor em tecnologia</span>.
+                            <span className="text-black font-bold"> Estou comprometido em construir sua marca e empresa com o que há de melhor em tecnologia</span>.
                             Se você precisa de um desenvolvedor qualificado, estou à disposição para <a href="#contateMe" className="text-cyan-600 underline">conversar</a>.
                         </p>
                     </div>
 
-                    <div className="text-black">
+                    <div className="text-text-light">
                         <p className="text-blue text-xl"><strong>Informações Pessoais</strong></p>
                         <br />
-                        <p className="py-2 border-b-2 border-text-light">Estado: Piauí</p>
-                        <p className="py-2 border-b-2 border-text-light">Freelancer: Disponível</p>
-                        <p className="py-2 border-b-2 border-text-light">Cidade: Piripiri</p>
-                        <p className="py-2 border-b-2 border-text-light">Email: liedson.b9@gmail.com</p>
-                        <p className="py-2 border-b-2 border-text-light">Telefone: (86) 998635571</p>
-                        <p className="py-2 border-b-2 border-text-light">LinkedIn: <a href="https://www.linkedin.com/in/seuperfil" className="text-blue-500">linkedin.com/in/liedsonlb</a></p>
-                        <p className="py-2 border-b-2 border-text-light">Valores: Colaboração, Aprendizado Contínuo, Excelência Profissional</p>
-                        <p className="py-2 border-b-2 border-text-light">Idiomas: Português (Nativo), Inglês (Intermediário)</p>
+                        <p className="py-2 border-b-2 border-text-light">Idade: <span className="text-blue"> 21 anos</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Cidade: <span className="text-blue"> Piripiri</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Estado: <span className="text-blue"> Piauí</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Freelancer: <span className="text-blue"> Disponível</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Email: <span className="text-blue"> liedson.b9@gmail.com</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Telefone: <span className="text-blue"> (86) 998635571</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Valores: <span className="text-blue"> Colaboração, Aprendizado Contínuo, Excelência Profissional</span></p>
+                        <p className="py-2 border-b-2 border-text-light">Idiomas: <span className="text-blue"> Português (Nativo), Inglês (Intermediário)</span></p>
                     </div>
                 </div>
                 <button className="flex items-center justify-center gap-2 px-5 py-3 rounded-full w-fit bg-blue text-white scaleIn mt-4 m-auto">
