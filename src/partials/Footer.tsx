@@ -3,12 +3,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <div className="flex-nowrap bg-white md-lg:gap-4 md-lg:flex-wrap md-lg:px-16 bg-white-light text-black font-[500] mt-[8rem] px-4 rounded py-8 text-center md-lg:text-start" style={{ boxShadow: '1px 1px 2px rgb(92, 90, 90)' }}>
-            <div className="flex flex-col gap-8 md-lg:flex-row md-lg:justify-between ">
-                <div className="flex items-center justify-center mb-8 md-lg:mb-0">
-                    <div className="p-4 bg-blue text-3xl text-white">
-                        <h1>LB</h1>
-                    </div>
-                </div>
+            <div className="flex flex-col gap-8 md-lg:flex-row md-lg:justify-between md-lg:max-w-[85%] md-lg:m-auto">
                 <div className="flex flex-col gap-6">
                     <h2 className="font-[800] text-[1.1rem] text-blue">Sobre</h2>
                     <div className="flex flex-col gap-2">

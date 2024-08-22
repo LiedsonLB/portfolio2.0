@@ -73,15 +73,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
         'Java', 'GitHub', 'VSCode', 'Git'
       ],
     },
-    {
-      picture: "/img/projects/Portfolio.png",
-      title: "Portfolio",
-      description: "",
-      github: 'https://github.com/LiedsonLB/portfolio2.0',
-      technologies: [
-        'HTML5', 'CSS3', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Figma', 'Jest', 'GitHub', 'VSCode', 'Git', 'Vercel'
-      ],
-    },
   ];
 
   res.status(200).json(projects);
