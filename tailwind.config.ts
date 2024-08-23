@@ -34,6 +34,7 @@ const config: Config = {
       screens: {
         'md-lg': '800px',
         'sm-lg': '500px',
+        'h-sm': {'raw': '(max-height: 600px)'}
       },
     },
   },

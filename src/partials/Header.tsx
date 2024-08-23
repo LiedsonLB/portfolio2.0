@@ -1,6 +1,8 @@
-"use client";
-import Aside from "@/components/Aside";
-import { useState } from "react";
+'use client'
+import React, { useState, useEffect } from 'react';
+import Aside from '@/components/Aside';
+import LanguageModal from '@/components/modals/LanguageModal';
+import { BsGlobeAmericas } from 'react-icons/bs';
 
 interface Language {
     code: string;
@@ -18,38 +20,48 @@ const languages: Language[] = [
 
 export default function Header() {
     const [isAsideModalOpen, setIsAsideModalOpen] = useState(false);
-    const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState<string | null>('pt'); // Idioma padrão
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+
+    // Recupera o idioma do localStorage quando o componente é montado
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem('selectedLanguage');
+        if (savedLanguage) {
+            setSelectedLanguage(savedLanguage);
+        } else {
+            setSelectedLanguage('pt'); // Idioma padrão
+        }
+    }, []);
 
     const handleAsideButtonClick = () => {
         setIsAsideModalOpen(!isAsideModalOpen);
     };
 
-    const toggleLanguageMenu = () => {
-        setIsLanguageMenuOpen(!isLanguageMenuOpen);
+    const toggleLanguageModal = () => {
+        setIsLanguageModalOpen(!isLanguageModalOpen);
     };
 
     const handleLanguageSelect = (language: Language) => {
         setSelectedLanguage(language.code);
-        setIsLanguageMenuOpen(false);
+        setIsLanguageModalOpen(false);
+        localStorage.setItem('selectedLanguage', language.code); // Salva o idioma no localStorage
         // Aqui você pode adicionar a lógica para aplicar o idioma selecionado
         console.log(`Idioma selecionado: ${language.name}`);
     };
 
     const currentLanguage = languages.find(lang => lang.code === selectedLanguage);
 
-    const handleUserButtonClick = () => {
-        setIsModalOpen(!isModalOpen);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
-
     return (
         <>
             {isAsideModalOpen && <Aside onClose={handleAsideButtonClick} />}
+            {isLanguageModalOpen && (
+                <LanguageModal
+                    languages={languages}
+                    isOpen={isLanguageModalOpen}
+                    onClose={toggleLanguageModal}
+                    onSelectLanguage={handleLanguageSelect}
+                />
+            )}
             <header className="bg-white text-gray font-[700] flex justify-between items-center px-6 md-lg:px-12 py-4 sticky top-0 z-10">
                 <h1>
                     <span className="bg-blue text-white p-2">LB</span> Liedson
@@ -57,7 +69,7 @@ export default function Header() {
 
                 <nav className="text-base list-none gap-8 hidden font-[600] md-lg:flex">
                     <li className="py-1">
-                        <a className="hover:text-blue" href="#aboutMe">Sobre mim</a>
+                        <a className="hover:text-blue" href="#aboutMe">Carreira</a>
                     </li>
                     <li className="py-1">
                         <a className="hover:text-blue" href="#myTecnologies">Tecnologias</a>
@@ -73,41 +85,16 @@ export default function Header() {
                     </li>
                     <li className="relative py-1">
                         <button
-                            onClick={toggleLanguageMenu}
+                            onClick={toggleLanguageModal}
                             className="flex items-center gap-2 hover:text-blue"
                         >
                             {currentLanguage ? (
                                 <img src={currentLanguage.url} alt="Idioma" className="w-6 h-6" />
                             ) : (
-                                <img src="/img/languages/brasil.png" alt="Idioma" className="w-6 h-6" /> // Bandeira padrão
+                                <BsGlobeAmericas />
                             )}
                             {currentLanguage ? currentLanguage.name : 'Idioma'}
                         </button>
-                        {isLanguageMenuOpen && (
-                            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-30">
-                                <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-                                    <h2 className="text-xl font-bold mb-4">Escolha o Idioma</h2>
-                                    <div className="grid grid-cols-2 gap-4">
-                                        {languages.map((language) => (
-                                            <div
-                                                key={language.code}
-                                                onClick={() => handleLanguageSelect(language)}
-                                                className="flex items-center p-4 border rounded-lg shadow-md hover:bg-gray-100 cursor-pointer"
-                                            >
-                                                <img src={language.url} alt={language.name} className="w-12 h-12 mr-2" />
-                                                <span className="text-lg font-medium">{language.name}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <button
-                                        onClick={() => setIsLanguageMenuOpen(false)}
-                                        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                                    >
-                                        Fechar
-                                    </button>
-                                </div>
-                            </div>
-                        )}
                     </li>
                 </nav>
 
