@@ -14,14 +14,14 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export default function SocialSkills() {
     const { data: skills, error } = useSWR<SocialSkill[]>('/api/social-skills', fetcher);
-    const [visibleCount, setVisibleCount] = useState(5);
+    const [visibleCount, setVisibleCount] = useState(4);
     const [isAllVisible, setIsAllVisible] = useState(false);
 
     if (error) return <div>Falha ao carregar os dados</div>;
     if (!skills) return <Loading />;
 
     const handleToggleVisibility = () => {
-        setVisibleCount(isAllVisible ? 5 : skills.length);
+        setVisibleCount(isAllVisible ? 4 : skills.length);
         setIsAllVisible(!isAllVisible);
     };
 
@@ -67,7 +67,7 @@ export default function SocialSkills() {
                     </div>
                 ))}
             </div>
-            {skills.length > 5 && (
+            {skills.length > 4 && (
                 <div className="mt-4 text-center">
                     <a href='#mySoftSkills'
                         onClick={handleToggleVisibility}

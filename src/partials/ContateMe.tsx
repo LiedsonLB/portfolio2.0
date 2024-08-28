@@ -5,6 +5,14 @@ export default function ContateMe() {
         console.log('mensagem enviada')
     }
 
+    function copiarTexto(texto: string) {
+        navigator.clipboard.writeText(texto).then(() => {
+            alert('Texto copiado para a área de transferência!');
+        }).catch((err) => {
+            console.error('Erro ao copiar texto: ', err);
+        });
+    }
+
     return (
 
         <div className="py-20" id="contateMe">

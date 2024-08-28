@@ -14,19 +14,19 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export default function CardsTecnologies() {
     const { data: technologies, error } = useSWR<Technology[]>('/api/technologies', fetcher);
-    const [visibleCount, setVisibleCount] = useState(10); // Initial number of visible items
-    const [isAllVisible, setIsAllVisible] = useState(false); // Track whether all items are visible
+    const [visibleCount, setVisibleCount] = useState(10);
+    const [isAllVisible, setIsAllVisible] = useState(false);
 
     if (error) return <div>Failed to load data</div>;
     if (!technologies) return <Loading />;
 
     const handleToggleVisibility = () => {
         if (isAllVisible) {
-            setVisibleCount(10); // Reset to initial number of visible items
+            setVisibleCount(10);
         } else {
-            setVisibleCount(technologies.length); // Show all items
+            setVisibleCount(technologies.length);
         }
-        setIsAllVisible(!isAllVisible); // Toggle visibility state
+        setIsAllVisible(!isAllVisible);
     };
 
     return (

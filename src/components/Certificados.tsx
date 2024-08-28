@@ -30,7 +30,7 @@ export default function Certificados() {
                         alt={certificado.title}
                         width={100}
                         height={100}
-                        className="rounded-lg"
+                        className="rounded-lg max-h-[100px] m-auto"
                     />
                     <div className="flex flex-col justify-center gap-4 w-full">
                         <h4 className="text-lg font-semibold text-black">{certificado.title}</h4>

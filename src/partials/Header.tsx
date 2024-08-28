@@ -11,11 +11,10 @@ interface Language {
 }
 
 const languages: Language[] = [
-    { code: 'pt', name: 'Português', url: '/img/languages/brasil.png' },
-    { code: 'en', name: 'Inglês', url: '/img/languages/estados-unidos.png' },
-    { code: 'es', name: 'Espanhol', url: '/img/languages/espanha.png' },
-    { code: 'jp', name: 'Japonês', url: '/img/languages/japao.png' },
-    // Adicione mais idiomas e bandeiras conforme necessário
+    { code: 'pt', name: 'Português', url: '/languages/brasil.png' },
+    { code: 'en', name: 'Inglês', url: '/languages/estados-unidos.png' },
+    { code: 'es', name: 'Espanhol', url: '/languages/espanha.png' },
+    { code: 'jp', name: 'Japonês', url: '/languages/japao.png' },
 ];
 
 export default function Header() {
@@ -23,13 +22,12 @@ export default function Header() {
     const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
 
-    // Recupera o idioma do localStorage quando o componente é montado
     useEffect(() => {
         const savedLanguage = localStorage.getItem('selectedLanguage');
         if (savedLanguage) {
             setSelectedLanguage(savedLanguage);
         } else {
-            setSelectedLanguage('pt'); // Idioma padrão
+            setSelectedLanguage('pt');
         }
     }, []);
 
@@ -44,8 +42,8 @@ export default function Header() {
     const handleLanguageSelect = (language: Language) => {
         setSelectedLanguage(language.code);
         setIsLanguageModalOpen(false);
-        localStorage.setItem('selectedLanguage', language.code); // Salva o idioma no localStorage
-        // Aqui você pode adicionar a lógica para aplicar o idioma selecionado
+        localStorage.setItem('selectedLanguage', language.code);
+        
         console.log(`Idioma selecionado: ${language.name}`);
     };
 
@@ -62,12 +60,12 @@ export default function Header() {
                     onSelectLanguage={handleLanguageSelect}
                 />
             )}
-            <header className="bg-white text-gray font-[700] flex justify-between items-center px-6 md-lg:px-12 py-4 sticky top-0 z-10">
-                <h1>
-                    <span className="bg-blue text-white p-2">LB</span> Liedson
+            <header className="bg-white text-black font-[600] flex justify-between items-center px-6 md-lg:px-12 py-4 sticky top-0 z-10">
+                <h1 className='fadeInLeft'>
+                    <span className="bg-blue text-white p-2 rounded-md ">LB</span> Liedson Barros
                 </h1>
 
-                <nav className="text-base list-none gap-8 hidden font-[600] md-lg:flex">
+                <nav className="text-base list-none gap-8 hidden md-lg:flex">
                     <li className="py-1">
                         <a className="hover:text-blue" href="#aboutMe">Carreira</a>
                     </li>

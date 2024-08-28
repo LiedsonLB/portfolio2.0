@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function AboutMe() {
     return (
-        <div className="my-20 py-20 bg-black" id="aboutMe">
-            <h1 className="big-text font-doppio font-[800] text-center mb-4 text-white" style={{ fontSize: 'clamp(30px, 5vw + 0.2rem, 50px)' }}>Jornada <span className="text-blue">profissional</span></h1>
-            <p className="max-w-[400px] text-center md-lg:max-w-[75%] m-auto text-white  mb-4" style={{ fontSize: 'clamp(16px, 3vw + 0.1rem, 20px)' }}>
+        <div className="my-20 py-20 " id="aboutMe">
+            <h1 className="big-text font-doppio font-[800] text-center mb-4 text-black" style={{ fontSize: 'clamp(30px, 5vw + 0.2rem, 50px)' }}>Minha <span className="text-blue">carreira</span></h1>
+            <p className="max-w-[400px] text-center md-lg:max-w-[75%] m-auto text-black  mb-4" style={{ fontSize: 'clamp(16px, 3vw + 0.1rem, 20px)' }}>
                 Leia um pouco sobre mim, e confira meus currículos, meus serviços, certificados, etc... em “Ler Tudo”
             </p>
             <div className="max-w-[95%] md-lg:max-w-[85%] m-auto py-8 px-6 md-lg:px-12 rounded-lg shadow-md bg-white text-text-light tracking-wide leading-relaxed">

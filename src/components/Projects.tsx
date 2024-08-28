@@ -29,7 +29,7 @@ export default function Projects() {
         <section className="flex flex-col-reverse p-4 items-center justify-center md-lg:flex-row max-w-[100%] ml-auto md-lg:max-w-[85%] md-lg:ml-auto md-lg:m-auto md-lg:mt-4">
             <div className="flex flex-row gap-6 w-full h-auto overflow-x-auto pb-6">
                 {projects.map((project) => (
-                    <div key={project.title} className="flex flex-col card relative w-[380px] min-w-[370px] h-[auto] min-h-[420px] overflow-hidden shadow-md fadeInAndUp">
+                    <div key={project.title} className="flex flex-col card relative w-[380px] min-w-[370px] h-[auto] min-h-[420px] overflow-hidden rounded-lg shadow-md fadeInAndUp">
                         <div className="container-img" style={{ height: '100%', position: 'relative' }}>
                             <Image
                                 src={project.picture}

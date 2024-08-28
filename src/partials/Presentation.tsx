@@ -24,7 +24,7 @@ export default function Apresentation() {
                 <div className="w-60 md-lg:w-80 h-auto">
                     <Image
                         className="rounded-full"
-                        style={{filter: 'brightness(1.2)'}}
+                        style={{ filter: 'brightness(1.2)' }}
                         src={profile}
                         alt=""
                     />

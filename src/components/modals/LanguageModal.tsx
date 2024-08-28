@@ -19,7 +19,7 @@ export default function LanguageModal({
             <div className="bg-white p-6 rounded-lg h-screen md-lg:h-auto shadow-lg w-full max-w-md">
                 <h2 className="text-xl font-bold mb-4">Escolha o Idioma</h2>
                 <p className="text-red-700">(Traduções ainda sendo implementadas)</p>
-                <div className="grid grid-cols-1 md-lg:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 py-6 md-lg:grid-cols-2 gap-4">
                     {languages.map((language) => (
                         <div
                             key={language.code}

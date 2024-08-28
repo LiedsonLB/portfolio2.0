@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import LanguageModal from "./modals/LanguageModal";
 import Loading from "./Loading";
 import Link from "next/link";
+import { FaEnvelope, FaLaptopCode, FaProjectDiagram, FaTools, FaUser } from "react-icons/fa";
 
 interface AsideProps {
     onClose: () => void;
@@ -14,10 +15,10 @@ export interface Language {
 }
 
 const languages: Language[] = [
-    { code: 'pt', name: 'Português', url: '/img/languages/brasil.png' },
-    { code: 'en', name: 'Inglês', url: '/img/languages/estados-unidos.png' },
-    { code: 'es', name: 'Espanhol', url: '/img/languages/espanha.png' },
-    { code: 'jp', name: 'Japonês', url: '/img/languages/japao.png' },
+    { code: 'pt', name: 'Português', url: '/languages/brasil.png' },
+    { code: 'en', name: 'Inglês', url: '/languages/estados-unidos.png' },
+    { code: 'es', name: 'Espanhol', url: '/languages/espanha.png' },
+    { code: 'jp', name: 'Japonês', url: '/languages/japao.png' },
 ];
 
 export default function Aside({ onClose }: AsideProps) {
@@ -54,41 +55,55 @@ export default function Aside({ onClose }: AsideProps) {
             <div className="flex flex-col justify-between w-[50rem] pt-12 h-sm:py-0 bg-ice p-4 h-screen min-h-screen max-h-screen overflow-auto">
                 <div className='flex flex-col h-full'>
                     <nav className="text-text-light list-none gap-8 font-[600] h-full px-2 flex flex-col">
+                        <h2 className="text-blue">Menu de Navegação</h2>
                         <ul className="w-full flex flex-col flex-grow">
                             <li className="py-1 w-full">
-                                <a className="block bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" href="#aboutMe" onClick={onClose}>Carreira</a>
+                                <a className="flex items-center gap-4 bg-white hover:text-blue fill-text-light hover:fill-blue shadow-md py-4 rounded-md text-start pl-6 w-full"
+                                    href="#aboutMe"
+                                    onClick={onClose}>
+                                    <FaUser />
+                                    Carreira
+                                </a>
                             </li>
                             <li className="py-1 w-full">
-                                <a className="block bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" href="#myTecnologies" onClick={onClose}>Tecnologias</a>
+                                <a className="flex items-center gap-4 bg-white hover:text-blue fill-text-light hover:fill-blue shadow-md py-4 rounded-md text-start pl-6 w-full"
+                                    href="#myTecnologies"
+                                    onClick={onClose}>
+                                    <FaTools />
+                                    Tecnologias
+                                </a>
                             </li>
                             <li className="py-1 w-full">
-                                <a className="block bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" href="#mySoftSkills" onClick={onClose}>Habilidades</a>
+                                <a className="flex items-center gap-4 bg-white hover:text-blue fill-text-light hover:fill-blue shadow-md py-4 rounded-md text-start pl-6 w-full"
+                                    href="#mySoftSkills"
+                                    onClick={onClose}>
+                                    <FaLaptopCode />
+                                    Habilidades
+                                </a>
                             </li>
                             <li className="py-1 w-full">
-                                <a className="block bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" href="#myProjects" onClick={onClose}>Projetos</a>
+                                <a className="flex items-center gap-4 bg-white hover:text-blue fill-text-light hover:fill-blue shadow-md py-4 rounded-md text-start pl-6 w-full"
+                                    href="#myProjects"
+                                    onClick={onClose}>
+                                    <FaProjectDiagram />
+                                    Projetos
+                                </a>
                             </li>
                             <li className="py-1 w-full">
-                                <a className="block bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" href="#contateMe" onClick={onClose}>Contatos</a>
+                                <a className="flex items-center gap-4 bg-white hover:text-blue fill-text-light hover:fill-blue shadow-md py-4 rounded-md text-start pl-6 w-full"
+                                    href="#contateMe"
+                                    onClick={onClose}>
+                                    <FaEnvelope />
+                                    Contatos
+                                </a>
                             </li>
-                            <hr className="my-4" />
-                            <li className="py-1 w-full">
-                                <Link href="/biografia" className="flex items-center gap-4 bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" onClick={onClose}>
-                                    Biografia
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#6b7280" width="15px" height="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z" /></svg>
-                                </Link>
-                            </li>
-                            <li className="py-1 w-full">
-                                <Link href="/curriculos" className="flex items-center gap-4 bg-white hover:text-blue shadow-md py-4 rounded-full text-start pl-6 w-full" onClick={onClose}>
-                                    Currículos
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#6b7280" width="15px" height="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z" /></svg>
-                                </Link>
-                            </li>
+                            <hr className="my-4 bg-text-light" />
                         </ul>
                         <div className="mt-auto">
                             <li className="relative py-1 w-full">
                                 <button
+                                    className="flex items-center gap-2 bg-white pl-6 hover:text-blue shadow-md py-4 rounded-md text-center w-full"
                                     onClick={toggleLanguageMenu}
-                                    className="flex items-center gap-2 bg-white pl-6 hover:text-blue shadow-md py-4 rounded-full text-center w-full"
                                 >
                                     {currentLanguage ? (
                                         <img src={currentLanguage.url} alt={currentLanguage.name} className="w-6 h-6" />
