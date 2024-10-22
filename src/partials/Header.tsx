@@ -43,7 +43,7 @@ export default function Header() {
         setSelectedLanguage(language.code);
         setIsLanguageModalOpen(false);
         localStorage.setItem('selectedLanguage', language.code);
-        
+
         console.log(`Idioma selecionado: ${language.name}`);
     };
 
@@ -60,9 +60,9 @@ export default function Header() {
                     onSelectLanguage={handleLanguageSelect}
                 />
             )}
-            <header className="bg-white text-black font-[600] flex justify-between items-center px-6 md-lg:px-12 py-4 sticky top-0 z-10">
+            <header className="bg-white text-text-light font-[600] flex justify-between items-center px-6 md-lg:px-12 py-4 sticky top-0 z-10">
                 <h1 className='fadeInLeft'>
-                    <span className="bg-blue text-white p-2 rounded-md ">LB</span> Liedson Barros
+                    Liedson Barros
                 </h1>
 
                 <nav className="text-base list-none gap-8 hidden md-lg:flex">

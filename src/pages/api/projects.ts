@@ -11,6 +11,24 @@ interface Project {
 export default function handler(req: NextApiRequest, res: NextApiResponse<Project[]>) {
   const projects: Project[] = [
     {
+      picture: "/img/projects/pokedex.png",
+      title: "Pokedex",
+      description: "Aplicação web desenvolvida como teste de codificação da empresa Baseworks. A aplicação funciona como uma Pokédex, permitindo aos usuários pesquisar, visualizar e filtrar informações sobre Pokémon utilizando a PokeAPI. O projeto foi construído com Vue.js, focando em uma interface intuitiva e responsiva.",
+      github: 'https://github.com/LiedsonLB/pokedex',
+      technologies: [
+        'HTML5', 'CSS3', 'TypeScript', 'Vue.js', 'Axios', 'FastAPI', 'Figma', 'Vercel', 'GitHub', 'VSCode', 'Git',
+      ]
+    },
+    {
+      picture: "/img/projects/imc_calculator.png",
+      title: "Calculadora de IMC",
+      description: "Esta é uma aplicação Flutter simples que calcula o Índice de Massa Corporal (IMC) e fornece uma análise categorizada com base no resultado. O IMC é uma medida amplamente utilizada para avaliar se uma pessoa está em um peso saudável para sua altura.",
+      github: 'https://github.com/LiedsonLB/CalculadorIMCApp',
+      technologies: [
+        'Flutter', 'Dart', 'GitHub', 'VSCode', 'Git'
+      ],
+    },
+    {
       picture: "/img/projects/neoboard.png",
       title: "Neoboard",
       description: "Repositório do código-fonte e os artefatos do projeto que atuei como Scrum Master. Desenvolvemos um Dashboard Empresarial Multitecnologia, incorporando diversas tecnologias para oferecer uma visão consolidada e interativa de dados cruciais.",
@@ -20,21 +38,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
       ],
     },
     {
-      picture: "/img/projects/zssn.png",
-      title: "Zssn",
-      description: "Um teste de codificação para uma vaga Fullstack usando Django e Vue para criar uma aplicação que atendesse o desafio de criar um site de sobrevivência para um apocalipse zumbi.",
-      github: 'https://github.com/LiedsonLB/desafio-infoG2',
-      technologies: [
-        'HTML5', 'CSS3', 'JavaScript', 'Vue.js', 'Python', 'Django', 'PostgreSQL'
-      ],
-    },
-    {
       picture: "/img/projects/kimipet.png",
       title: "Kimipet",
       description: "Um teste de codificação para uma vaga Frontend usando Next e Tailwind, Kimipet é uma plataforma revolucionária que busca empoderar os donos de pets, oferecendo um local seguro e conveniente para armazenar e acessar dados importantes de seus animais de estimação. Acreditamos que cada pet merece cuidados da mais alta qualidade, e cada proprietário de pet merece acesso transparente e fácil às informações essenciais sobre seus companheiros peludos.",
       github: 'https://github.com/LiedsonLB/kimipet',
       technologies: [
         'HTML5', 'CSS3', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Figma', 'Jest', 'Vercel', 'GitHub', 'VSCode', 'Git'
+      ],
+    },
+    {
+      picture: "/img/projects/zssn.png",
+      title: "Zssn",
+      description: "Um teste de codificação para uma vaga Fullstack usando Django e Vue para criar uma aplicação que atendesse o desafio de criar um site de sobrevivência para um apocalipse zumbi.",
+      github: 'https://github.com/LiedsonLB/desafio-infoG2',
+      technologies: [
+        'HTML5', 'CSS3', 'JavaScript', 'Vue.js', 'Python', 'Django', 'PostgreSQL'
       ],
     },
     {

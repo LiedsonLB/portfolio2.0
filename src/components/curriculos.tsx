@@ -5,17 +5,17 @@ export default function Curriculos() {
         {
             title: 'Currículo Fullstack Developer',
             description: 'Um resumo detalhado de minha experiência como desenvolvedor Fullstack.',
-            src: '/curriculos/fullstack-developer.pdf',
+            src: '/curriculos/DesenvolvedorFullstack_CV_LiedsonBarros.pdf',
         },
         {
             title: 'Currículo Frontend Developer',
             description: 'Focado em minhas habilidades e experiências como desenvolvedor Frontend.',
-            src: '/curriculos/frontend-developer.pdf',
+            src: '/curriculos/DesenvolvedorFrontEnd_CV_LiedsonBarros.pdf',
         },
         {
-            title: 'Currículo Frontend Developer',
-            description: 'Focado em minhas habilidades e experiências como desenvolvedor Frontend.',
-            src: '/curriculos/frontend-developer.pdf',
+            title: 'Currículo Backend Developer',
+            description: 'Focado em minhas habilidades e experiências como desenvolvedor Backend.',
+            src: '/curriculos/DesenvolvedorBackend_CV_LiedsonBarros.pdf',
         },
         // Adicione mais currículos conforme necessário
     ];
@@ -26,12 +26,9 @@ export default function Curriculos() {
                 <div key={index} className="mb-8 bg-white shadow-lg rounded-lg p-6 min-h-full">
                     <h2 className="font-doppio font-bold text-2xl text-black mb-3">{curriculo.title}</h2>
                     <p className="text-text-light mb-4">{curriculo.description}</p>
-                    <a href={curriculo.src}
-                        download
-                        className="inline-block cursor-pointer text-blue font-semibold hover:underline transition duration-300"
-                    >
-                        Ver Currículo
-                    </a>
+                    <Link href={curriculo.src} target="_blank" rel="noopener noreferrer" className="inline-block cursor-pointer text-blue font-semibold hover:underline transition duration-300"                    >
+                        Baixar Currículo
+                    </Link>
                 </div>
             ))}
         </div>

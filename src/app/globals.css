@@ -268,7 +268,7 @@ input:checked + .toggle {
 }
 
 .carousel-track {
-  animation: scroll 30s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 /* Loading */
