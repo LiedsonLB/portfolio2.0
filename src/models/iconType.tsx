@@ -1,0 +1,1 @@
+type IconType = 'FaLaptopCode' | 'FaComments' | 'FaTachometerAlt' | 'FaCog' | 'FaCloud' | 'FaProjectDiagram' | 'FaRobot';
